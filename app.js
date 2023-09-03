@@ -85,6 +85,10 @@ app.post("/", (_req, _res) => {
   request.end();
 });
 
+app.post("/failure", (_req, _res) => {  
+  _res.redirect("/");
+});
+
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
